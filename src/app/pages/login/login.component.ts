@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  //metodo para probar el login
   Iniciar(){
   console.log('hdd');
   
