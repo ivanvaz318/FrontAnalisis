@@ -1,4 +1,64 @@
-<p>login works!</p>
-<button (click)="Iniciar()">
-    Iniciar 
-</button>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+
+    <!-- Login Form -->
+
+    <form #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="text-muted m-0 text-pequeno">Email</label>
+        <input
+          type="text"
+          formControlName="correo"
+          class="form-control inputexto"
+          [ngClass]="
+            submitted && form.controls['correo'].errors
+              ? 'is-invalid'
+              : !submitted && form.controls['correo'].valid
+              ? 'is-valid'
+              : submitted && form.controls['correo'].valid
+              ? 'is-valid'
+              : null
+          "
+        />
+        <div
+          *ngIf="submitted && form.controls['correo'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="form.controls['correo'].errors.required">
+            El correo electrónico es requerido.
+          </div>
+          <div *ngIf="form.controls['correo'].errors.email">
+            El correo electrónico debe ser una dirección válida.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="text-muted m-0 text-pequeno">Contraseña</label>
+        <input type="password" formControlName="contrasena" class="form-control inputexto" [ngClass]="submitted && form.controls['contrasena'].errors ? 'is-invalid' : !submitted && form.controls['contrasena'].valid ? 'is-valid' : submitted && form.controls['contrasena'].valid ? 'is-valid' : null"
+        />
+        <div *ngIf="submitted && form.controls['contrasena'].errors" class="invalid-feedback">
+            <div *ngIf="form.controls['contrasena'].errors.required">La contraseña es requerido</div>
+            <div *ngIf="form.controls['contrasena'].errors.minlength">La contraseña debe tener al menos 9 digitos</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-outline-info rounded-pill btnInicio">
+            <span [hidden]="spiner">Iniciar Sesión</span>
+            <span [hidden]="!spiner">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </span>
+        </button>
+    </div>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+  </div>
+</div>
