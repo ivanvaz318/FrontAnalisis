@@ -1,34 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClientService } from '../implementation/http-client.service';
-import { ConfigService } from '../../config/config.service';
-import { UsuarioLogin } from '../models/usuarioLogin.models';
+import { HttpClientService } from 'src/app/implementation/http-client.service';
+import { ConfigService } from 'src/config/config.service';
 import { environment } from 'src/environments/environment';
-import { RespuestaSolicitud } from '../models/respuestaSolicitud.model';
-
-import Swal from 'sweetalert2';
-import { BehaviorSubject } from 'rxjs';
-import { Usuario } from '../models/usuario.model';
+import { Comentarios, Comentario } from '../models/comentarios.models';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class AuthService {
-  Respuesta: RespuestaSolicitud;
-  User = new BehaviorSubject<Usuario>(null);
+export class AnalizarcomentarioService {
+
   constructor(
     private http: HttpClientService,
     private router: Router,
     private config: ConfigService
-  ) {}
+  ) { }
 
-  login(Credenciales: UsuarioLogin) {
+  enviarcomentario(Comentarios:any){
     this.http
-      .post(`${environment.Api}login/authenticate`, Credenciales)
+      .post(`${environment.Api}PreprocesaComentarios/AnalisisComentario`,Comentarios)
       .subscribe(
         (res: any) => {
           if (res) {
-            this.Respuesta = res;
+            console.log(res);
+
+            //agrege ahorita
+
+           /* this.Respuesta = res;
 
             if (this.Respuesta.Codigo == 1) {
               console.log(this.Respuesta.Data);
@@ -56,21 +54,19 @@ export class AuthService {
               this.router.navigate(['/'], { replaceUrl: true });
             }
             this.config.setLocal();
+*/
+            //termina LO AGREGADO
+
           }
         },
         (err) => {
-          console.log(err);
+          if (err.status == 0) {
+            console.log(err);
+            
+            localStorage.clear();
+           // location.reload();
+          }
         }
       );
-  }
-
-  getUser(){
-    this.http.get(`${environment.Api}User/SearchUser?Nombre=Ivan&Ivanvaz@gmail.com`).subscribe(
-      (res:any)=>{
-        console.log(res);
-        
-      }
-    )
-      
   }
 }

@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 //modulos
-import { SharedModule } from '../shared/shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 //paginas
@@ -19,13 +19,16 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
         DashboardComponent,
         LoginComponent
     ],
-    exports: [ReactiveFormsModule],
+    exports: [
+        FormsModule,
+        ReactiveFormsModule],
     imports:[
         PagesComponents,
         FormsModule,
         ReactiveFormsModule,
         CommonModule,
         SharedModule
+        
     ]
 })
 

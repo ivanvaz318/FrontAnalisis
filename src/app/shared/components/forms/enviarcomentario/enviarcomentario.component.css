@@ -1,0 +1,15 @@
+.contenedor {
+  width: 50%;
+  left: 2%;
+  position: relative;
+  padding: 20px;
+}
+
+.enviar{
+    left: 20%;
+position: relative;
+}
+
+.alerta{
+    width: 53%;
+}
