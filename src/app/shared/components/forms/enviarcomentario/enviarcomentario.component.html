@@ -18,8 +18,31 @@
 
   <div class="form-group">
       <button class="btn btn-outline-info rounded-pill enviar">
-          <span >Enviar</span>
+          <span >Agregar comentario</span>
          
       </button>
   </div>
   </form>
+<br>
+<!-- Mostrar los comentarios -->
+<div  class="h-100" class="ex1">    
+    <label class="text-muted m-0 text-pequeno">Comentarios agregados : </label>
+
+    <div name="tipoPregunta" *ngFor="let comentario of comentarios">
+        <div name="tipoPregunta" *ngFor="let item of comentario | keyvalue; first as isFirst">
+            <label class="text-muted m-0 text-pequeno" *ngIf="isFirst"> 
+                {{item.value}}
+            </label>
+            <label><i class="fas fa-trash"></i> fgdgf</label>
+        </div>
+    </div>
+    
+</div>
+
+
+  <div class="form-group">
+    <button class="btn btn-outline-info rounded-pill enviar">
+        <span >Enviar</span>
+       
+    </button>
+</div>

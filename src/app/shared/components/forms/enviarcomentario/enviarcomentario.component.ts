@@ -11,7 +11,9 @@ import { AnalizarcomentarioService } from '../../../servicesshared/analizarcomen
 export class EnviarcomentarioComponent implements OnInit {
   form: FormGroup;
   submitted: boolean = false;
-idcomentario:number =1;
+  idcomentario:number =1;
+
+  comentarios=[];
 
 
 
@@ -22,7 +24,7 @@ idcomentario:number =1;
 
   ngOnInit() {
     this.form = this.fb.group({
-      comentario: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
+      comentario: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(500)]],
     });
   }
 
@@ -43,11 +45,11 @@ idcomentario:number =1;
         this.form.value.comentario,
       );
 
-      let comentarios=[];
-      comentarios.push(com);
+ 
+      this.comentarios.push(com);
 
      // this.analizarcomentario.enviarcomentario(comentarios);
-      this.analizarcomentario.enviarcomentario(comentarios);
+    //  this.analizarcomentario.enviarcomentario(comentarios);
       this.submitted=false;
 
     }

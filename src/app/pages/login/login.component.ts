@@ -40,7 +40,9 @@ export class LoginComponent implements OnInit {
         this.form.value.correo,
         this.form.value.contrasena
       );
-      this.SAuth.login(credenciales);
+     this.SAuth.login(credenciales);
+    
+
       this.submitted=false;
     }
   }

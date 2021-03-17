@@ -11,13 +11,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { PagesComponents } from "./pages.routes";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisis.component';
 
 
 @NgModule({
     declarations: [
         PagesComponent,
         DashboardComponent,
-        LoginComponent
+        LoginComponent,
+        ResultadoanalisisComponent
     ],
     exports: [
         FormsModule,

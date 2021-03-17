@@ -13,3 +13,8 @@ position: relative;
 .alerta{
     width: 53%;
 }
+div.ex1 {
+  height: 15rem;
+  overflow: scroll;
+  width: 55%;
+}

@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { EnviarcomentarioComponent } from './components/forms/enviarcomentario/enviarcomentario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RespuestaanalisisComponent } from './components/respuestaanalisis/respuestaanalisis.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
 @NgModule({
-  declarations: [EnviarcomentarioComponent, RespuestaanalisisComponent],
+  declarations: [EnviarcomentarioComponent, RespuestaanalisisComponent, NavbarComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -16,7 +17,8 @@ import { RespuestaanalisisComponent } from './components/respuestaanalisis/respu
   exports:[
     EnviarcomentarioComponent,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NavbarComponent
   ]
 })
 export class SharedModule { }

@@ -64,13 +64,56 @@ export class AuthService {
       );
   }
 
-  getUser(){
-    this.http.get(`${environment.Api}User/SearchUser?Nombre=Ivan&Ivanvaz@gmail.com`).subscribe(
-      (res:any)=>{
-        console.log(res);
-        
+  getUser() {
+    this.http.get(`${environment.Api}User/getUserToken`).subscribe(
+      (res: any) => {
+        console.log('este es el usuario ', res);
+        this.User.next(
+          new Usuario(
+            null,
+            res.Nombre,
+            res.ApellidoPaterno,
+            null,
+            res.Email,
+            null,
+            null,
+            res.Token
+          )
+        );
+      },
+      (err) => {
+        // Si el codigo en estatus es 0 entonces borre el local storage y por consiguiente regresa al login.
+        if (err.status == 0) {
+          localStorage.clear();
+          location.reload();
+
+        }
+        console.log(err);
       }
-    )
-      
+    );
+  }
+
+  getcerrarSesion() {
+    this.http.get(`${environment.Api}Login/cerrarSesion`).subscribe(
+      (res: any) => {
+        console.log('este es la respuesta ', res);
+        if (res.Codigo == 4) {
+          localStorage.clear();
+          this.User.next(null);
+           location.reload();
+        }
+        if (res.Codigo == 5) {
+          location.reload();
+        }
+      },
+      (err) => {
+        // Si el codigo en estatus es 0 entonces borre el local storage y por consiguiente regresa al login.
+        if (err.status == 0) {
+          localStorage.clear();
+          location.reload();
+        }
+        console.log(err);
+      }
+    );
   }
 }
