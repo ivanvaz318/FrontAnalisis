@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      correo: [''],
+      correo: ['',[Validators.required]],
       contrasena: ['', [Validators.required, Validators.minLength(3)]],
     });
   }
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         this.form.value.correo,
         this.form.value.contrasena
       );
-     this.SAuth.login(credenciales);
+    this.SAuth.login(credenciales);
     
 
       this.submitted=false;

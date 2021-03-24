@@ -222,3 +222,9 @@ a:hover{
         justify-content: center;
     }
 }
+
+.invalid-feedback{
+    display: block;
+    position: absolute;
+    top: 3rem;
+}
