@@ -14,8 +14,8 @@ import Swal from 'sweetalert2';
 })
 export class AnalizarcomentarioService {
   Respuesta: RespuestaSolicitud;
-  resAnalisis = new BehaviorSubject<Respuestaanalisis>(null);
-
+  resAnalisis = new BehaviorSubject<RespuestaAnalisis[]>(null);
+  arreglocomentarios: RespuestaAnalisis[]=[];
   constructor(
     private http: HttpClientService,
     private router: Router,
@@ -23,6 +23,8 @@ export class AnalizarcomentarioService {
   ) {}
 
   enviarcomentario(Comentarios: any) {
+    console.log("Data a enviar", Comentarios);
+    
     this.http
       .post(`${environment.Api}PreprocesaComentarios/AnalisisComentario`,Comentarios)
       .subscribe(
@@ -58,20 +60,13 @@ export class AnalizarcomentarioService {
   }
 
   llenarrespuestaAnalisis(Data: any) {
-    Data.forEach((respuestaAnalisis) => {
-      this.resAnalisis.next(
-        new Respuestaanalisis(
-          respuestaAnalisis.idcomentario,
-          respuestaAnalisis.comentario,
-          respuestaAnalisis.score_tag,
-          respuestaAnalisis.agreement,
-          respuestaAnalisis.subjectivity,
-          respuestaAnalisis.confidence,
-          respuestaAnalisis.irony
-        )
-      );
+
+   
+    Data.forEach(comentario => {
+      this.arreglocomentarios.push(comentario);
     });
-    //localStorage.setItem('tk', this.Respuesta.Data[0]['Token']);
+ 
+      this.resAnalisis.next(this.arreglocomentarios);
     this.router.navigate(['/resultado'], { replaceUrl: true });
   }
 

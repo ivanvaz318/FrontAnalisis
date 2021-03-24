@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -14,10 +14,15 @@ export class LoginComponent implements OnInit {
   submitted: boolean = false;
 
   spiner: boolean = false;
+  status: boolean = false;
+  status2: boolean = false;
+
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private SAuth: AuthService
+    private SAuth: AuthService,
+    private elem: ElementRef
   ) {}
 
   ngOnInit() {
@@ -46,4 +51,15 @@ export class LoginComponent implements OnInit {
       this.submitted=false;
     }
   }
+
+
+  Animacion(){
+      this.status = !this.status;    
+  }
+  Animacion2(){
+    this.status2 = !this.status2;    
 }
+  
+
+}
+

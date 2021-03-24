@@ -3,8 +3,11 @@
         <h2>Resultado del analisis</h2>
     </div>
     <div>
-        <div *ngFor="let item of RespuestaAnalisisComentario | keyvalue">
-             <b>{{item.key}}</b> => <b>{{item.value}}</b>
+        <div *ngFor="let comentario of RespuestaAnalisisComentario">
+
+            <div *ngFor="let item of comentario | keyvalue">
+                <b>{{item.key}}</b> => <b>{{item.value}}</b>
+           </div>
         </div>
     </div>
 </div>

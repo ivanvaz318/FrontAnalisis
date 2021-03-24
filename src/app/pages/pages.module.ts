@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { PagesComponents } from "./pages.routes";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisis.component';
+import { RegistrarusuarioComponent } from './registrarusuario/registrarusuario.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisi
         PagesComponent,
         DashboardComponent,
         LoginComponent,
-        ResultadoanalisisComponent
+        ResultadoanalisisComponent,
+        RegistrarusuarioComponent
     ],
     exports: [
         FormsModule,
