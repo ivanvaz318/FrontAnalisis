@@ -6,11 +6,15 @@ import { HttpClientService } from '../implementation/http-client.service';
 import { RegistrarUsuario } from '../models/registrarUsuario.model';
 import { RespuestaSolicitud } from '../models/respuestaSolicitud.model';
 
+import Swal from 'sweetalert2';
+import { Reporte } from '../shared/models/respuestaReporte.model';
+
 @Injectable({
   providedIn: 'root',
 })
 export class RegistrarusuarioService {
   Respuesta: RespuestaSolicitud;
+  reporte: Reporte;
 
   constructor(
     private http: HttpClientService,
@@ -29,7 +33,14 @@ export class RegistrarusuarioService {
           this.Respuesta = res;
           if (this.Respuesta.Codigo == 1) {
             console.log(this.Respuesta);
-
+            
+            Swal.fire({
+              
+              icon: 'success',
+              title: 'Registro Exitoso',
+              showConfirmButton: false,
+              timer: 1500
+            })
             this.router.navigate(['/login'], { replaceUrl: true });
           }
         }

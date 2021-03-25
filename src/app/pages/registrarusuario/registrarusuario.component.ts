@@ -22,9 +22,9 @@ export class RegistrarusuarioComponent implements OnInit {
 
   ngOnInit(){
     this.form = this.fb.group({
-      nombre: ['', [Validators.required]],
-      AP:['', [Validators.required]],
-      AM:['', [Validators.required]],
+      nombre: ['', [Validators.required, Validators.minLength(3)]],
+      AP:['', [Validators.required,Validators.minLength(3)]],
+      AM:['', [Validators.required, Validators.minLength(3)]],
       correo: ['', [Validators.required]],
       contrasena: ['', [Validators.required, Validators.minLength(8)]],
     });

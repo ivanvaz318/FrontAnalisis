@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { CardComponent } from './components/card/card.component';
+import { ReportesComponent } from './components/reportes/reportes.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CardComponent } from './components/card/card.component';
     ContenidoComponent,
     BreadcrumbComponent,
     CardComponent,
+    ReportesComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
   exports: [

@@ -59,6 +59,13 @@ export class AuthService {
           }
         },
         (err) => {
+          Swal.fire({
+              
+            icon: 'error',
+            title: 'Usuario o Contraseña Incorrecto',
+            showConfirmButton: false,
+            timer: 1500
+          })
           console.log(err);
         }
       );
