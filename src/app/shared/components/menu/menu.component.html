@@ -1,6 +1,6 @@
-<div class="sidebar" #menu>
+<div >
     <div class="sidebar-brand">
-        <h2><span class="lab la-accusoft"></span> <span>Sentiment Analysis</span>
+        <h2><span class="lab la-accusoft"></span> <span  *ngIf="!btnmenu">Sentiment Analysis</span>
         </h2>
     </div>
 
@@ -8,36 +8,22 @@
         <ul>
             <li>
                 <a href="" class="active"><span class="las la-home"></span>
-                    <span>Dashboard</span></a>
+                    <span *ngIf="!btnmenu">Dashboard</span></a>
             </li>
             <li>
                 <a routerLink = "/analizar"><span class="las la-users"></span>
-                    <span>Analizar comentarios</span></a>
+                    <span  *ngIf="!btnmenu">Analizar comentarios</span></a>
             </li>
             <li>
                 <a routerLink="/reportes"><span class="las la-clipboard-list"></span>
                     <span>Reportes</span></a>
-            </li>
-            <!--<li>
-                <a href=""><span class="las la-shopping-bag"></span>
-                    <span>Orders</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-receipt"></span>
-                    <span>Inventory</span></a>
-            </li>
-            <li>
-                <a href=""><span class="las la-user-circle"></span>
-                    <span>Accounts</span></a>
-            </li>
-            <li>
                 <a href=""><span class="las la-clipboard-list"></span>
-                    <span>Tasks</span></a>
-            </li>-->
+                    <span  *ngIf="!btnmenu">Reportes</span></a>
+            </li>
         </ul>
     </div>
     <div class="perfil">
-        <h2><span class="las la-user"></span> <span>Perfil Usuario</span>
+        <h2><span class="las la-user" ></span> <span  *ngIf="!btnmenu">Perfil Usuario</span>
         </h2>
     </div>
 </div>

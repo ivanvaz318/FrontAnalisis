@@ -1,3 +1,32 @@
+.analizar-comentario{
+margin: 1px;
+
+}
+
+
+
+.alerta{ /* diseño de la clase alerta donde muestra analizar comentario*/
+  display: block;
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  background-color: #50c49d;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.alerta h2{ /*diseño de h2 del texto analizar comentario*/
+  text-align: center;
+  color: white;
+}
+
 .contenedor {
   width: 50%;
   left: 2%;
@@ -5,16 +34,47 @@
   padding: 20px;
 }
 
+
+.contenedor {
+  width: 85%;
+  height: 102px;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding-top: 2px;
+  background: white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
 .enviar{
-    left: 20%;
+left: 20%;
 position: relative;
+background-color: orangered;
+margin-top: 20px;
+color: white;
 }
 
 .alerta{
     width: 53%;
 }
+
+
 div.ex1 {
-  height: 15rem;
+  width: 50%;
+  left: 2%;
+  position: relative;
+  padding: 20px;
   overflow: scroll;
-  width: 55%;
+}
+
+
+ div.ex1{
+  width: 85%;
+  height: 240px;
+  border: 1px solid #ccc;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding-top: 2px;
+  background: white;
+  box-shadow: 1px 1px 2px #ddd;;
+
 }

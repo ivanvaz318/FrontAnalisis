@@ -6,5 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class VariablesService {
   pagina = new BehaviorSubject<string>("");
+  btnmenu = new BehaviorSubject<boolean>(false);
+
   constructor() { }
 }

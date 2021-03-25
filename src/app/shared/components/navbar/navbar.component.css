@@ -1,49 +1,12 @@
-
-
-#nav-toggle:checked + .sidebar {
-    width: 70px;
-}
-/*se realizaron cambios*/
-#nav-toggle:checked + .sidebar .sidebar-brand,
-#nav-toggle:checked + .sidebar .perfil,/*cambio*/
-#nav-toggle:checked + .sidebar li{
-    padding-left: 1rem;
-    text-align: center;
-}
-
-#nav-toggle:checked + .sidebar li a{
-    padding-left: 0rem;
-}
-
-#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
-#nav-toggle:checked + .sidebar .perfil h2 span:last-child,/*cambio*/
-#nav-toggle:checked + .sidebar li a span:last-child{
-    display: none;
-}
-
-#nav-toggle:checked ~ .main-content {
-    margin-left: 70px;
-}
-
-#nav-toggle:checked ~ .main-content header {
-    width: calc(100% - 70px);
-    left: 70px;
-}
-
-.main-content{
-    transition: margin-left 300ms;
-    margin-left: 345px;
-}
-
-header  {
+.header  {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     position: fixed;
-    left: 345px;
-    width: calc(100% - 345px);
+    left: 25%;
+    width: calc(100% - 25%);
     top: 0;
     z-index: 100;
     transition: left  300ms;
@@ -53,11 +16,11 @@ header  {
     display: none;
 }
 
-header h2 {
+.header h2 {
     color: #222;
 }
 
-header label span {
+.header label span {
     font-size: 1.7rem;
     padding-right: 1rem;
 }
@@ -76,7 +39,7 @@ header label span {
     color: #f1f5f9;
     padding: 1rem 1rem;
     font-size: 1rem;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-top-left-radius:50px 50px ;
     border-bottom-left-radius: 50px 50px;
 }
@@ -101,4 +64,35 @@ header label span {
 .user-wrapper small {
     display: inline-block;
     color: var(--text-grey);
+}
+
+
+
+.header2  {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 5%;
+    width: calc(100% - 5%);
+    top: 0;
+    z-index: 100;
+    transition: left  300ms;
+}
+
+/* responsivo*/
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+
+    .header {
+        width: calc(100% - 25%);
+        left: 25%;
+    }
+
+    .header2 {
+        width: calc(100% - 25%);
+        left: 25%;
+    }
 }

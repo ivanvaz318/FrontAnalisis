@@ -1,10 +1,14 @@
-<app-navbar></app-navbar>
+<div class="componente">
+    <div class="sidebar" [ngClass]="btnmenu ? 'sidebar2' : 'null'" >
+        <app-menu></app-menu>
+    </div>
+    <div class="main-content" [ngClass]="btnmenu ? 'main-content2' : 'null'">
+        <div class="header" >
+            <app-navbar></app-navbar>
+        </div>
 
-<div class="container-fluid contenedor" style="background-color: #f2f4f8;">
-    <div class="row">
-<app-menu></app-menu>
-<app-contenido id="Contenido" class="contenidoNormal"></app-contenido>
+        <div class="main">
+            <app-contenido></app-contenido>
+        </div>
     </div>
 </div>
-
-
