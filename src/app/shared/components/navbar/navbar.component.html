@@ -15,9 +15,9 @@
     </div>
   </nav>
 -->
-
-<div class="main-content"><!-- Inica contenido principal-->
-  <header>
+<input type="checkbox" id="nav-toggle" (click)="cambiarmenu()">
+<div ><!-- Inica contenido principal-->
+  <div class="header" [ngClass]="btnmenu ? 'header2' : 'null'">
     <h2>
         <label for="nav-toggle">
             <span class="las la-bars"></span>
@@ -36,7 +36,6 @@
             <small>Super admin</small>
         </div>
     </div>
-</header>
-
+  </div>
 
 </div><!-- Termina contenido principal-->

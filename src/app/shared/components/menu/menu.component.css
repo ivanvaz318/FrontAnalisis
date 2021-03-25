@@ -68,3 +68,51 @@
     display: inline-block;
     padding-right: .5rem;
 }
+
+
+/* responsivo*/
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+    .sidebar {
+        width: 25%;
+    }
+    
+    .sidebar .sidebar-brand, 
+    .sidebar .perfil, 
+    .sidebar li{
+        padding-left: 1rem;
+        text-align: center;
+    }
+    
+    .sidebar li a{
+        padding-left: 0rem;
+    }
+    
+    .sidebar .sidebar-brand h2 span:last-child,
+    .sidebar .perfil h2 span:last-child,
+    .sidebar li a span:last-child{
+        display: none;
+    }
+    
+    .sidebar:hover{
+        width: 25%;
+        z-index: 200;
+    }
+    
+    .sidebar:hover .sidebar-brand,
+    .sidebar:hover .perfil,
+    .sidebar:hover li{
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    .sidebar:hover li a{
+        padding-left: 1rem;
+    }
+    
+    .sidebar:hover .sidebar-brand h2 span:last-child,
+    .sidebar:hover .perfil h2 span:last-child,
+    .sidebar:hover li a span:last-child{
+        display: inline;
+    }
+}
