@@ -1,8 +1,10 @@
-<router-outlet></router-outlet>
+<app-navbar></app-navbar>
 
-
-
-<div *ngIf="bandera">
-    <app-enviarcomentario></app-enviarcomentario>
+<div class="container-fluid contenedor" style="background-color: #f2f4f8;">
+    <div class="row">
+<app-menu></app-menu>
+<app-contenido id="Contenido" class="contenidoNormal"></app-contenido>
+    </div>
 </div>
+
 

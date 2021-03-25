@@ -5,6 +5,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { LoginComponent } from './login/login.component';
 import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisis.component';
 import { RegistrarusuarioComponent } from './registrarusuario/registrarusuario.component';
+import { EnviarcomentarioComponent } from '../shared/components/forms/enviarcomentario/enviarcomentario.component';
 
 const pagesRoutes: Routes=[
     {
@@ -14,6 +15,7 @@ const pagesRoutes: Routes=[
         children: [
             {path: '', component: DashboardComponent, data: { titulo: 'Pagina de inicio'}},
             {path: 'resultado', component: ResultadoanalisisComponent, data: { titulo: 'Resultado del analisis'}},
+            {path: 'analizar', component: EnviarcomentarioComponent, data: { titulo: 'analizar'}}
 
         ]
     },
