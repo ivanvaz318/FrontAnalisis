@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-6">
+
+    <div class="card-body">
+        <h3 style="text-align: center;">Score_tag</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="Score_TagChartData"
+          [labels]="Score_TagChartLabels"
+          [colors]="Score_Tagcolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card-body">
+        <h3 style="text-align: center;">AGREEMENT</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="AGREEMENTChartData"
+          [labels]="AGREEMENTChartLabels"
+          [colors]="AGREEMENTcolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+             
+  <div class="col-6">
+    <div class="card-body">
+        <h3 style="text-align: center;">Subjectivity</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="SubjectivityChartData"
+          [labels]="SubjectivityChartLabels"
+          [colors]="Subjectivitycolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card-body">
+        <h3 style="text-align: center;">Irony</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="IronyChartData"
+          [labels]="IronyChartLabels"
+          [colors]="Ironycolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+<div class="card-body">
+    <h3>Confidence</h3>
+    <div style="display: block">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+      </div>
+</div>
+  </div>
+
+</div>
