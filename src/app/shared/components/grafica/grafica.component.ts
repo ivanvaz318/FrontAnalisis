@@ -11,6 +11,7 @@ import { AnalizarcomentarioService } from '../../servicesshared/analizarcomentar
 
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import * as pluginDataLabels from 'chartjs-plugin-datalabels';
+import { VariablesService } from 'src/app/services/variables.service';
 
 @Component({
   selector: 'app-grafica',
@@ -86,10 +87,10 @@ export class GraficaComponent {
   ];
   
   constructor(
-    private analisis: AnalizarcomentarioService,
+    private VariablesGL: VariablesService,
     private router: Router
   ) {
-    this.analisis.resAnalisis.subscribe((value) => {
+    this.VariablesGL.resAnalisis.subscribe((value) => {
       if (value) {
         console.log(value);
 

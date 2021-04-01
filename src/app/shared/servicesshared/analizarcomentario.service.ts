@@ -20,13 +20,14 @@ import {
   Subjectivity,
 } from '../models/respuestaGraficas.model';
 import { map } from 'rxjs/operators';
+import { VariablesService } from 'src/app/services/variables.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AnalizarcomentarioService {
   Respuesta: RespuestaSolicitud;
-  resAnalisis = new BehaviorSubject<RespuestaGra>(null);
+ 
 
   respuestaGraficas: RespuestaGra = {
     agreement: null,
@@ -59,7 +60,8 @@ export class AnalizarcomentarioService {
   constructor(
     private http: HttpClientService,
     private router: Router,
-    private config: ConfigService
+    private config: ConfigService,
+    private VariableGL: VariablesService
   ) {}
 
   enviarcomentario(Comentarios: any) {
@@ -122,7 +124,7 @@ export class AnalizarcomentarioService {
     this.respuestaGraficas.subjectivity = this.subjectivity;
     this.respuestaGraficas.irony = this.Irony;
 
-     this.resAnalisis.next(this.respuestaGraficas);
+     this.VariableGL.resAnalisis.next(this.respuestaGraficas);
      this.router.navigate(['/resultado'], { replaceUrl: true });
   }
 

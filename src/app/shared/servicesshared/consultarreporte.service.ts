@@ -11,8 +11,8 @@ import { Reporte } from '../models/respuestaReporte.model';
 export class ConsultarreporteService {
   
   Respuesta: RespuestaSolicitud;
-  Report = new BehaviorSubject<Reporte[]>(null);
-  arregloReportes:Reporte[] =[];
+  Report = new BehaviorSubject<any>(null);
+  arregloReportes:any[] =[];
   
   constructor(
     private http: HttpClientService
@@ -25,15 +25,12 @@ consultaReporte(){
   .subscribe(
     (res: any) => {
       if (res){
-        console.log(res);
+       
         this.Respuesta = res;
         if (this.Respuesta.Codigo ==1) {
-          console.log(this.Respuesta);
-          let resReporte: any = this.Respuesta.Data;
-
-          resReporte.forEach((reportes) => {
-          this.arregloReportes.push(reportes);            
-          });
+          this.arregloReportes.push(this.Respuesta.Data);
+         
+          this.Report.next(this.Respuesta.Data);        
         }
       }
     }
