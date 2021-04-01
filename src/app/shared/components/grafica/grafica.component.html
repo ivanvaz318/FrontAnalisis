@@ -1,8 +1,7 @@
 <div class="row">
   <div class="col-6">
-
     <div class="card-body">
-        <h3 style="text-align: center;">Score_tag</h3>
+      <h3 style="text-align: center">Polaridad</h3>
       <div style="display: block">
         <canvas
           baseChart
@@ -19,7 +18,7 @@
 
   <div class="col-6">
     <div class="card-body">
-        <h3 style="text-align: center;">AGREEMENT</h3>
+      <h3 style="text-align: center">Acuerdo</h3>
       <div style="display: block">
         <canvas
           baseChart
@@ -33,10 +32,10 @@
       </div>
     </div>
   </div>
-             
+
   <div class="col-6">
     <div class="card-body">
-        <h3 style="text-align: center;">Subjectivity</h3>
+      <h3 style="text-align: center">Subjetividad</h3>
       <div style="display: block">
         <canvas
           baseChart
@@ -53,7 +52,7 @@
 
   <div class="col-6">
     <div class="card-body">
-        <h3 style="text-align: center;">Irony</h3>
+      <h3 style="text-align: center">Ironia</h3>
       <div style="display: block">
         <canvas
           baseChart
@@ -68,19 +67,38 @@
     </div>
   </div>
 
-  <div class="col-6">
-<div class="card-body">
-    <h3>Confidence</h3>
-    <div style="display: block">
-        <canvas baseChart
+  <!-- <div class="col-6">
+    <div class="card-body">
+      <h3>Confidence</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
           [datasets]="barChartData"
           [labels]="barChartLabels"
           [options]="barChartOptions"
+          [plugins]="barChartPlugins"
           [legend]="barChartLegend"
-          [chartType]="barChartType">
+          [chartType]="barChartType"
+        >
         </canvas>
       </div>
-</div>
-  </div>
+    </div>
+  </div> -->
 
+  <div class="col-6">
+      <div class="card-body">
+        <h3 style="text-align: center;">Confianza</h3>
+        <div class="chart">
+            <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="ChartOptions"
+              [plugins]="pieChartPlugins"
+              [colors]="pieChartColors"
+              [legend]="pieChartLegend">
+            </canvas>
+          </div>
+      </div>
+  </div>
 </div>
