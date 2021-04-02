@@ -9,6 +9,10 @@ import { ContenidoComponent } from './components/contenido/contenido.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { CardComponent } from './components/card/card.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { GraficaComponent } from './components/grafica/grafica.component';
+import { TableModule } from 'primeng/table';
+
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -19,8 +23,15 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     BreadcrumbComponent,
     CardComponent,
     ReportesComponent,
+    GraficaComponent,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [
+     CommonModule,
+     ChartsModule,
+     FormsModule, 
+     ReactiveFormsModule, 
+     RouterModule,
+     TableModule],
   exports: [
     EnviarcomentarioComponent,
     FormsModule,
@@ -28,7 +39,8 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     NavbarComponent,
     MenuComponent,
     ContenidoComponent,
-    CardComponent
+    CardComponent,
+    GraficaComponent
   ],
 })
 export class SharedModule {}

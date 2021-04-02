@@ -7,14 +7,12 @@ import { RegistrarUsuario } from '../models/registrarUsuario.model';
 import { RespuestaSolicitud } from '../models/respuestaSolicitud.model';
 
 import Swal from 'sweetalert2';
-import { Reporte } from '../shared/models/respuestaReporte.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RegistrarusuarioService {
   Respuesta: RespuestaSolicitud;
-  reporte: Reporte;
 
   constructor(
     private http: HttpClientService,
@@ -24,23 +22,20 @@ export class RegistrarusuarioService {
 
   registraUsuario(datosUsuario: RegistrarUsuario) {
     console.log(datosUsuario);
-    
-    this.http
-    .post(`${environment.Api}User/InsertUser`,datosUsuario)
-    .subscribe(
+
+    this.http.post(`${environment.Api}User/InsertUser`, datosUsuario).subscribe(
       (res: any) => {
         if (res) {
           this.Respuesta = res;
           if (this.Respuesta.Codigo == 1) {
             console.log(this.Respuesta);
-            
+
             Swal.fire({
-              
               icon: 'success',
               title: 'Registro Exitoso',
               showConfirmButton: false,
-              timer: 1500
-            })
+              timer: 1500,
+            });
             this.router.navigate(['/login'], { replaceUrl: true });
           }
         }

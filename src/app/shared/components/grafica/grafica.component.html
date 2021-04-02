@@ -1,0 +1,87 @@
+
+<div class="row">
+  <div class="col-6">
+    <div class="card-body">
+      <h3 style="text-align: center">Polaridad</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="Score_TagChartData"
+          [labels]="Score_TagChartLabels"
+          [colors]="Score_Tagcolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card-body">
+      <h3 style="text-align: center">Acuerdo</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="AGREEMENTChartData"
+          [labels]="AGREEMENTChartLabels"
+          [colors]="AGREEMENTcolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card-body">
+      <h3 style="text-align: center">Subjetividad</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="SubjectivityChartData"
+          [labels]="SubjectivityChartLabels"
+          [colors]="Subjectivitycolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card-body">
+      <h3 style="text-align: center">Ironia</h3>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [data]="IronyChartData"
+          [labels]="IronyChartLabels"
+          [colors]="Ironycolors"
+          [options]="ChartOptions"
+          chartType="doughnut"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+      <div class="card-body">
+        <h3 style="text-align: center;">Confianza</h3>
+        <div class="chart">
+            <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="ChartOptions"
+              [plugins]="pieChartPlugins"
+              [colors]="pieChartColors"
+              [legend]="pieChartLegend">
+            </canvas>
+          </div>
+      </div>
+  </div>
+</div>

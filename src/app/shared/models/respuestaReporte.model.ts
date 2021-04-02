@@ -20,3 +20,11 @@ export class Reporte {
         
     }
 }
+
+export class Reportes{
+    constructor(
+        public respuestaReporte: Reporte[]
+    ) {
+
+    }
+}

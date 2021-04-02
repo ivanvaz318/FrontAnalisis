@@ -7,6 +7,7 @@ import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisi
 import { RegistrarusuarioComponent } from './registrarusuario/registrarusuario.component';
 import { EnviarcomentarioComponent } from '../shared/components/forms/enviarcomentario/enviarcomentario.component';
 import { ReportesComponent } from '../shared/components/reportes/reportes.component';
+import { GraficaComponent } from '../shared/components/grafica/grafica.component';
 
 const pagesRoutes: Routes=[
     {
@@ -17,7 +18,9 @@ const pagesRoutes: Routes=[
             {path: '', component: DashboardComponent, data: { titulo: 'Pagina de inicio'}},
             {path: 'resultado', component: ResultadoanalisisComponent, data: { titulo: 'Resultado del analisis'}},
             {path: 'analizar', component: EnviarcomentarioComponent, data: { titulo: 'analizar'}},
-            {path: 'reportes', component: ReportesComponent, data: { titulo: 'reportes '}}
+            {path: 'reportes', component: ReportesComponent, data: { titulo: 'reportes '}},
+            {path: 'graficas', component: GraficaComponent, data: { titulo: 'graficas '}}
+
 
 
         ]

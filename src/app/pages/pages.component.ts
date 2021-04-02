@@ -15,14 +15,7 @@ export class PagesComponent implements OnInit {
     private analisis:AnalizarcomentarioService,
     private variablesGL:VariablesService 
   ) { 
-    this.analisis.resAnalisis
-      .subscribe( value=>{
-        if (value) {
-          this.bandera=false;
-        }
-      }
-       
-      );
+   
       this.variablesGL.btnmenu
       .subscribe( value=>{
           this.btnmenu=value;
