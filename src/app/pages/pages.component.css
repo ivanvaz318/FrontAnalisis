@@ -67,6 +67,24 @@
 }
 
 
+
+/* para la card de user*/
+
+.side-user {
+    top: 57px;
+    right: 1.8vw;
+    padding: 1rem;
+    background: #ffffff;
+    color: #33313b;
+    position: fixed;
+    z-index: 100;
+    border: 1px solid #eaeaea;
+}
+
+
+/* ----------------*/
+
+
 /* responsive*/
 
 
