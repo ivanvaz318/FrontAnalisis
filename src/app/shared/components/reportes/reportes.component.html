@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 <div>
     <div class="titulo">
         <h2>Reportes </h2>
     </div>
 </div>
-=======
-
-<p-table #dt [columns]="cols" [value]="products" selectionMode="multiple" [(selection)]="selectedProducts">
+<div class="tablacomentario">
+<p-table #dt [columns]="cols" [value]="products"  selectionMode="multiple" [(selection)]="selectedProducts" [scrollable]="true"  scrollHeight="500px" >
     <ng-template pTemplate="caption">
         <div class="p-d-flex">
                   <button type="button" class="btn btn-success"  pTooltip="PDF" tooltipPosition="bottom"  (click)="exportPdf()">
@@ -18,7 +16,7 @@
     
                   </div>
     </ng-template>
-    <ng-template pTemplate="header" let-columns>
+    <ng-template pTemplate="header" let-columns >
         <tr>
             <th class="thPtable">
                Gráfica
@@ -26,14 +24,16 @@
             <th *ngFor="let col of columns">
                 {{col.header}}
             </th>
-         
+        
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
+   
+
+    <ng-template pTemplate="body" let-rowData let-columns="columns"  >
         <tr [pSelectableRow]="rowData">
                <td  class="thPtable">
              
-            <button type="button" class="btn btn-info" (click)="verGrafica(rowData)"><img src="/assets/imgDashboard/analytics.png" class="imgGrafica"></button>
+            <button type="button" class="btn btn-outline-info" (click)="verGrafica(rowData)"><img src="/assets/imgDashboard/analytics.png" class="imgGrafica"></button>
          </td>
             <td *ngFor="let col of columns">
                 {{rowData[col.field]}}
@@ -41,5 +41,7 @@
       
         </tr>
     </ng-template>
+
+
 </p-table>
->>>>>>> DeveloperRVaz
+</div>

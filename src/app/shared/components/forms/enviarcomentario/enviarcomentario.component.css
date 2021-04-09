@@ -50,7 +50,9 @@ margin: 1px;
 .enviar{/*boton enviar*/
 left: 10%;
 position: relative;
+background-color: orangered;
 margin-top: 20px;
+color: white;
 }
 
 .enviar{
