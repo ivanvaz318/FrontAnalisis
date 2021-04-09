@@ -15,6 +15,9 @@
             <app-side-user [@flipInXAnimation]="mostrarSideUser" (click)="clickSides($event)" class="side-user rounded shadow" ></app-side-user>
         </div>
 
+        <div *ngIf="mostrarLoading" >
+            <app-loading></app-loading>
+        </div>
 
     </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { VariablesService } from '../services/variables.service';
-import { AnalizarcomentarioService } from '../shared/servicesshared/analizarcomentario.service';
+
 
 
 //Animaciones
@@ -21,6 +21,8 @@ export class PagesComponent implements OnInit {
   bandera=true;
   btnmenu:boolean;
   mostrarSideUser: boolean;
+  mostrarLoading: boolean;
+  
   contador: number = 0;
   constructor(
     private variablesGL:VariablesService,
@@ -29,7 +31,8 @@ export class PagesComponent implements OnInit {
    
       this.variablesGL.btnmenu.subscribe( value=>{this.btnmenu=value;});
       this.variablesGL.showSideUser.subscribe(value => {this.mostrarSideUser = value;});
-    
+      this.variablesGL.mostrarLoading.subscribe(value=> {this.mostrarLoading = value;});
+
   }
 
   ngOnInit(){

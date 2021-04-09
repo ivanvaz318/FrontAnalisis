@@ -12,5 +12,8 @@ export class VariablesService {
 
   
   showSideUser = new BehaviorSubject<boolean>(false);
+  mostrarLoading = new BehaviorSubject<boolean>(false);
+
+
   constructor() { }
 }

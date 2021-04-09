@@ -14,6 +14,7 @@ import { TableModule } from 'primeng/table';
 
 import { ChartsModule } from 'ng2-charts';
 import { SideUserComponent } from './components/side-user/side-user.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SideUserComponent } from './components/side-user/side-user.component';
     ReportesComponent,
     GraficaComponent,
     SideUserComponent,
+    LoadingComponent,
   ],
   imports: [
      CommonModule,
@@ -43,7 +45,8 @@ import { SideUserComponent } from './components/side-user/side-user.component';
     ContenidoComponent,
     CardComponent,
     GraficaComponent,
-    SideUserComponent
+    SideUserComponent,
+    LoadingComponent
   ],
 })
 export class SharedModule {}

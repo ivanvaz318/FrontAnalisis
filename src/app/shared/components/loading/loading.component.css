@@ -1,0 +1,524 @@
+*{
+    box-sizing: border-box;
+}
+
+.principal{
+    position: relative;
+    background-color: aquamarine;
+    top:10rem;
+}
+
+img{
+    position: absolute;
+    margin: 0;
+    min-height: 66vh;
+    display: flex;
+    top: 14rem;
+    left: 43rem;
+    opacity: 0.9;
+}
+
+
+.loader-container{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 16%;
+    left: 42%;
+    right: 43%;
+    padding: 5%;
+    top:1rem
+    
+}
+
+.loader-container .loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 85%;
+    border: solid 4px transparent;
+    border-top-color: #0dac77;
+    border-left-color: #0dac77;
+    border-radius: 50%;
+    animation: loader 1.9s linear  infinite;
+}
+
+.loader-container .loader2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    border: solid 4px transparent;
+    border-top-color: #283fc3;
+    border-left-color: #283fc3;
+    border-radius: 50%;
+    animation: loader2 1.2s linear infinite;
+}
+
+.loader-container .loader3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    height: 55%;
+    border: solid 4px transparent;
+    border-top-color: #e0c444;
+    border-left-color: #e0c444;
+    border-radius: 50%;
+    animation: loader3 1.3s linear infinite;
+}
+
+
+@keyframes loader{
+    0%{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+@keyframes loader2{
+    0%{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform:translate(-50%, -50%) rotate(-360deg);
+    }
+    
+}
+
+@keyframes loader3{
+    0%{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/*.procesar h2{
+    position: fixed;
+    font-size: 20px;
+    margin-top: -14px;
+    padding-left: 76px;
+    text-align: center;
+    color: rgb(8, 7, 15);
+    left: 1rem;
+    top: 1rem;
+}*/
+
+.procesar h2{
+    position: absolute;
+    font-size: 27px;
+    margin-top: 21rem;
+    padding-left: 28rem;
+    text-align: center;
+    color: rgb(8, 7, 15);
+    left: 33rem;
+    top: 31rem;
+}
+
+.procesar2 h2{
+    position: absolute;
+    font-size: 42px;
+    margin-top: 18rem;
+    padding-left: 22rem;
+    text-align: center;
+    color: rgb(45, 34, 128);
+    left: 34rem;
+    top: -11rem;
+}
+
+.procesar2 h2 span{
+    margin-right: 1rem;
+}
+
+/*media de 1100px a 1300px*/
+@media only screen and (min-width:1000px) and (max-width:1300px){
+
+    img{
+        min-height: 38vh;
+        top: 15rem;
+        left: 14rem;
+    }
+
+    .loader-container{
+        top:11rem
+        
+    }
+
+    .procesar h2{
+        left: -1rem;
+        top: 21rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 8rem;
+        top: -10rem;
+    }
+}
+
+/*media de 1100px a 1200px*/
+@media only screen and (min-width:1100px) and (max-width:1200px){
+
+    img{
+        height: 34rem;
+        min-height: 16vh;
+        top: 36rem;
+        left: 11rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 180px;
+        height: 180px;
+        padding: 8%;
+        left: 39%;
+        top:32rem
+        
+    }
+
+    .procesar h2{
+        font-size: 24px;
+        left: -4rem;
+        top: 41rem;
+    }
+
+    .procesar2 h2{
+        font-size: 38px;
+        padding-left: 12rem;
+        left: 3rem;
+        top: 7rem;
+    }
+}
+
+/*media de 1000px a 1100px*/
+@media only screen and (min-width:1000px) and (max-width:1100px){
+
+    img{
+        height: 34rem;
+        min-height: 16vh;
+        top: 13rem;
+        left: 11rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 180px;
+        height: 180px;
+        padding: 8%;
+        left: 39%;
+        top:9rem
+        
+    }
+
+    .procesar h2{
+        font-size: 24px;
+        left: -4rem;
+        top: 18rem;
+    }
+
+    .procesar2 h2{
+        font-size: 38px;
+        padding-left: 12rem;
+        left: 3rem;
+        top:-11rem;
+    }
+}
+
+/*media de 900px a 1000px*/
+@media only screen and (min-width:900px) and (max-width:1000px){
+
+    img{
+        height: 28rem;
+        min-height: 21vh;
+        top: 16rem;
+        left: 14rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 170px;
+        height: 170px;
+        padding: 8%;
+        left: 43%;
+        top:11rem
+        
+    }
+
+    .procesar h2{
+        font-size: 20px;
+        left: -4rem;
+        top: 17rem;
+    }
+
+    .procesar2 h2{
+        font-size: 32px;
+        padding-left: 12rem;
+        left: 5rem;
+        top: -7rem;
+    }
+}
+/*media de 800px a 900px*/
+@media only screen and (min-width:800px) and (max-width:900px){
+
+    img{
+        height: 27rem;
+        min-height: 21vh;
+        top: 16rem;
+        left: 9rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 170px;
+        height: 170px;
+        padding: 8%;
+        left: 36.5%;
+        top:12rem
+        
+    }
+
+    .procesar h2{
+        font-size: 20px;
+        left: -9rem;
+        top: 15rem;
+    }
+
+    .procesar2 h2{
+        font-size: 30px;
+        padding-left: 12rem;
+        left: 1rem;
+        top: -8rem;
+    }
+    
+
+}
+
+/*media de 700px a 800px*/
+@media only screen and (min-width:700px) and (max-width:800px){
+
+    img{
+        height: 27rem;
+        min-height: 10vh;
+        top: 16rem;
+        left: 5rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 150px;
+        height: 150px;
+        padding: 11%;
+        left: 33%;
+        top:13rem
+        
+    }
+
+    .procesar2 h2{
+        font-size: 28px;
+        padding-left: 6rem;
+        left:3rem;
+        top: -8rem;
+    }
+
+    .procesar h2{
+        font-size: 19px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 13rem;
+        top: 32rem;
+    }
+    
+
+}
+
+
+/*media de 600px a 700px*/
+@media only screen and (min-width:600px) and (max-width:700px){
+
+    img{
+        height: 23rem;
+        min-height: 10vh;
+        top: 16rem;
+        left: 4.5rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 150px;
+        height: 150px;
+        padding: 11%;
+        left: 32%;
+        top:14rem
+        
+    }
+
+    .procesar2 h2{
+        font-size: 26px;
+        padding-left: 6rem;
+        left:1rem;
+        top: -7rem;
+    }
+
+    .procesar h2{
+        font-size: 18px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 11rem;
+        top: 29rem;
+    }
+    
+
+}
+
+
+
+/*media de 500px a 600px*/
+@media only screen and (min-width:500px) and (max-width:600px){
+
+    img{
+        height: 20rem;
+        min-height: 10vh;
+        top: 18rem;
+        left: 3rem;
+    }
+
+    .loader-container{
+        position: fixed;
+        width: 150px;
+        height: 150px;
+        padding: 11%;
+        left: 29%;
+        top:15rem
+        
+    }
+
+    .procesar2 h2{
+        font-size: 23px;
+        padding-left: 6rem;
+        left:-1rem;
+        top: -7rem;
+    }
+
+    .procesar h2{
+        font-size: 16px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 8rem;
+        top: 29rem;
+    }
+    
+
+}
+
+/*media de 400px a 500px*/
+@media only screen and (min-width:400px) and (max-width:500px){
+
+    .loader-container{
+        position: fixed;
+        width: 160px;
+        height: 160px;
+        padding: 11%;
+        left: 27%;
+        top:11rem
+        
+    }
+
+    .procesar2 h2{
+        font-size: 18px;
+        padding-left: 6rem;
+        left:-1rem;
+        top: -9rem;
+    }
+
+    .procesar h2{
+        font-size: 14px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 7rem;
+        top: 23rem;
+    }
+    
+}
+
+
+/*media de 300px a 400px*/
+@media only screen and (min-width:300px) and (max-width:400px){
+
+    .loader-container{
+        position: fixed;
+        width: 160px;
+        height: 160px;
+        padding: 11%;
+        left: 27%;
+        top:11rem
+        
+    }
+
+    .procesar2 h2{
+        font-size: 16px;
+        padding-left: 6rem;
+        left:-2rem;
+        top: -7rem;
+    }
+
+    .procesar h2{
+        font-size: 13px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 6rem;
+        top: 21rem;
+    }
+    
+    
+    /*img{
+        height: 13rem;
+        min-height: 10vh;
+        top: 14rem;
+        left: 3rem;
+    }
+
+   .loader-container{
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        padding: 11%;
+        left: 34%;
+        top:12rem
+        
+    }
+
+    .procesar h2{
+        font-size: 13px;
+        margin-top: 4rem;
+        padding-left: 2rem;
+        left: 6rem;
+        top: 21rem;
+    }
+   
+    .procesar2 h2{
+        font-size: 16px;
+        padding-left: 6rem;
+        left:-2rem;
+        top: -7rem;
+    }*/
+}
+
+@media only screen and (min-width:200px) and (max-width:300px){
+
+    .loader-container{
+        position: fixed;
+        width: 160px;
+        height: 160px;
+        padding: 11%;
+        left: 27%;
+        top:11rem
+        
+    }
+}
