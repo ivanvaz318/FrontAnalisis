@@ -1,4 +1,177 @@
-<p>login works!</p>
-<button (click)="Iniciar()">
-    Iniciar 
-</button>
+<!--<div class="wrapper fadeInDown">
+  <div id="formContent">
+    
+
+    
+
+
+
+    <form #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="text-muted m-0 text-pequeno">Email</label>
+        <input
+          type="text"
+          formControlName="correo"
+          class="form-control inputexto"
+          [ngClass]="
+            submitted && form.controls['correo'].errors
+              ? 'is-invalid'
+              : !submitted && form.controls['correo'].valid
+              ? 'is-valid'
+              : submitted && form.controls['correo'].valid
+              ? 'is-valid'
+              : null
+          "
+        />
+        <div
+          *ngIf="submitted && form.controls['correo'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="form.controls['correo'].errors.required">
+            El correo electrónico es requerido.
+          </div>
+          <div *ngIf="form.controls['correo'].errors.email">
+            El correo electrónico debe ser una dirección válida.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="text-muted m-0 text-pequeno">Contraseña</label>
+        <input
+          type="password"
+          formControlName="contrasena"
+          class="form-control inputexto"
+          [ngClass]="
+            submitted && form.controls['contrasena'].errors
+              ? 'is-invalid'
+              : !submitted && form.controls['contrasena'].valid
+              ? 'is-valid'
+              : submitted && form.controls['contrasena'].valid
+              ? 'is-valid'
+              : null
+          "
+        />
+        <div
+          *ngIf="submitted && form.controls['contrasena'].errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="form.controls['contrasena'].errors.required">
+            La contraseña es requerido
+          </div>
+          <div *ngIf="form.controls['contrasena'].errors.minlength">
+            La contraseña debe tener al menos 8 digitos
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-outline-info rounded-pill btnInicio">
+          <span [hidden]="spiner">Iniciar Sesión</span>
+          <span [hidden]="!spiner">
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only"></span>
+          </span>
+        </button>
+      </div>
+    </form>
+
+    
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/registrar">registrarse</a>
+    </div>
+  </div>
+</div>
+
+
+-->
+
+<div class="body">
+  <img class="wave" src="/assets/imgLogin/wave.png" />
+  <div class="container">
+    <div class="img">
+      <img src="/assets/imgLogin/img.svg" />
+    </div>
+    <div class="login-container">
+      <form class="form" #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <img class="avatar" src="/assets/imgLogin/avatar.svg" />
+        <h2 class="h2">Iniciar Sesión</h2>
+        <div class="input-div one" >
+          <div class="i" >
+            <i class="fas fa-user" ></i>
+          </div>
+         
+         
+          <div>
+            <h5>Email</h5>
+            <input formControlName="correo" class="form-control input" type="text"  [ngClass]="
+                submitted && form.controls['correo'].errors
+                  ? 'is-invalid'
+                  : !submitted && form.controls['correo'].valid
+                  ? 'is-valid'
+                  : submitted && form.controls['correo'].valid
+                  ? 'is-valid'
+                  : null
+              " />
+
+            <div *ngIf="submitted && form.controls['correo'].errors" class="invalid-feedback">
+              <div *ngIf="form.controls['correo'].errors.required">
+                El correo electrónico es requerido.
+              </div>
+              <div *ngIf="form.controls['correo'].errors.email">
+                El correo electrónico debe ser una dirección válida.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-div two" [ngClass]="status2 ? 'focus' : 'null'">
+          <div class="i" [ngClass]="status2 ? 'focus' : 'null'">
+            <i class="fas fa-lock" [ngClass]="status2 ? 'focus' : 'null'"></i>
+          </div>
+          <div>
+            <h5>Contraseña</h5>
+            <input class="input" type="password" (click)="Animacion2()" [ngClass]="status2 ? 'focus' : 'null'"
+              formControlName="contrasena" [ngClass]="
+                submitted && form.controls['contrasena'].errors
+                  ? 'is-invalid'
+                  : !submitted && form.controls['contrasena'].valid
+                  ? 'is-valid'
+                  : submitted && form.controls['contrasena'].valid
+                  ? 'is-valid'
+                  : null
+              " />
+      
+            <div *ngIf="submitted && form.controls['contrasena'].errors" class="invalid-feedback">
+              <div *ngIf="form.controls['contrasena'].errors.required">
+                La contraseña es requerido
+              </div>
+              <div *ngIf="form.controls['contrasena'].errors.minlength">
+                La contraseña debe tener al menos 8 digitos
+              </div>
+            </div>
+          </div>
+        </div>
+       
+       
+        <div class="form-group">
+          <a routerLink= "/registrar">¿No tienes una cuenta? Registrate</a>
+          <button class="btn btn-outline-info rounded-pill btnInicio">
+            <span [hidden]="spiner">Iniciar Sesión</span>
+            <span [hidden]="!spiner">
+              <span
+                class="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only"></span>
+            </span>
+          </button>
+        </div>
+        <span [hidden]="!spiner"> </span>
+      </form>
+    </div>
+  </div>
+</div>

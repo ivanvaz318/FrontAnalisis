@@ -1,0 +1,105 @@
+.componente{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar{
+    width: 25%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 100;
+    transition: width 300ms;
+}
+
+.main-content{
+    transition: margin-left 300ms;
+    margin-left: 25%;/*---*/
+}
+
+.header  {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 25%;
+    width: calc(100% - 25%);
+    top: 0;
+    z-index: 100;
+    transition: left  300ms;
+}
+
+.main {
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background-color: #f1f5f9;
+    min-height: calc(100vh - 90px);
+}
+
+/* ------*/
+
+
+.sidebar2{
+    width: 5%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 100;
+    transition: width 300ms;
+}
+
+
+.main-content2{
+    transition: margin-left 300ms;
+    margin-left: 5%;/*---*/
+}
+
+
+
+/* para la card de user*/
+
+.side-user {
+    top: 57px;
+    right: 1.8vw;
+    padding: 1rem;
+    background: #ffffff;
+    color: #33313b;
+    position: fixed;
+    z-index: 100;
+    border: 1px solid #eaeaea;
+}
+
+
+/* ----------------*/
+
+
+/* responsive*/
+
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+    .sidebar {
+        width: 25%;
+    }
+    .main-content {
+        margin-left: 25%;
+    }
+
+    .sidebar2 {
+        width: 25%;
+    }
+    .main-content2 {
+        margin-left: 25%;
+    }
+}

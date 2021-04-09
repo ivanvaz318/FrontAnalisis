@@ -1,0 +1,44 @@
+.picture-user-size {
+    -webkit-background-size: 108px 108px;
+    background-size: 108px 108px;
+    -webkit-border-radius: 50%;
+    display: block;
+    margin: -1px;
+    height: 108px;
+    width: 108px;
+    border: 1px solid #1d1919;
+}
+
+.font-weight-bolder {
+    margin: 0 0 0 0;
+}
+
+.text-muted {
+    margin: 0 0 16px 0;
+}
+
+.lista {
+    padding-left: 1rem !important;
+    list-style: none;
+    width: 100%;
+}
+
+.icono {
+    font-size: 1.5rem;
+    padding: .5rem;
+    padding: 9px 15px;
+    color: #54667a;
+}
+
+.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: rgba(120, 130, 140, 0.13);
+}
+
+ul>li:hover>i,
+li:hover {
+    color: #FF6E40;
+    cursor: pointer;
+}
