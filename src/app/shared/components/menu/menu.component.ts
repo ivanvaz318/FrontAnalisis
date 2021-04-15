@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   btnmenu:boolean=false;
 
   constructor(
+
     private router: Router,
     private variableGL:VariablesService
 
@@ -31,6 +32,11 @@ export class MenuComponent implements OnInit {
     console.log("menu");
     
     this.router.navigate(['/analizar'], { replaceUrl: true });
+
+  }
+
+  verMenu(){
+    this.variableGL.btnmenu.next(true);
 
   }
 

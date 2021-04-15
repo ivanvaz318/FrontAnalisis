@@ -25,6 +25,7 @@ consultaReporte(){
   .subscribe(
     (res: any) => {
       if (res){
+       console.log(res);
        
         this.Respuesta = res;
         if (this.Respuesta.Codigo ==1) {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Comentarios, Comentario } from '../../../models/comentarios.models';
+import Swal from 'sweetalert2';
+import { Comentario } from '../../../models/comentarios.models';
 import { AnalizarcomentarioService } from '../../../servicesshared/analizarcomentario.service';
 
 @Component({
@@ -44,19 +45,39 @@ export class EnviarcomentarioComponent implements OnInit {
       return;
     } else {
       let com = new Comentario(this.idcomentario++, this.form.value.comentario);
-      this.comentarios.push(com);
+      this.comentarios.push(com);      
       this.submitted = false;
       this.form.reset();
     }
   }
 
   quitar(Comentario) {
-    console.log(Comentario);
 
+    Swal.fire({
+      title: '¿Desea eliminar este comentario?',
+      text: "",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
     var i = this.comentarios.indexOf(Comentario);
     if (i !== -1) {
       this.comentarios.splice(i, 1);
     }
+        Swal.fire(
+          'Comentario eliminado',
+          '',
+          'success'
+        )
+      }
+    })
+
+
   }
 
   enviarcomentario() {
@@ -64,4 +85,5 @@ export class EnviarcomentarioComponent implements OnInit {
       this.analizarcomentario.enviarcomentario(this.comentarios);
     }
   }
+
 }
