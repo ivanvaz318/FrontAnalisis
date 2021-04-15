@@ -1,0 +1,104 @@
+.analizar-comentario{
+margin: 1px;
+
+}
+
+
+
+.alerta{ /* diseño de la clase alerta donde muestra analizar comentario*/
+  display: block;
+  width: 41%;
+  height: 57px;
+  line-height: 75px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #0d6efd;
+  box-shadow: 0px 1px 1px #b3b8bb, 4px 0px 12px #dce0e2, 3px 3px 0px #c9d2d6, -14px 10px 8px #b6bbbd;
+  margin: 0px auto;
+  margin-top: 4px;
+  margin-bottom: 64px;
+  border-radius: 30px 0px 30px 0px;;
+}
+
+.alerta h2{ /*diseño de h2 del texto analizar comentario*/
+  text-align: center;
+  color: white;
+  margin-top:-8px;
+}
+
+.contenedor {
+  width: 50%;
+  left: 2%;
+  position: relative;
+  padding: 20px;
+}
+
+
+.contenedor {
+  width: 85%;
+  height: 102px;
+  margin: 0px auto;
+  margin-top: 26px;
+  padding-top: 2px;
+  background: white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.enviar{/*boton enviar*/
+left: 10%;
+position: relative;
+margin-top: 20px;
+}
+
+.enviar{
+  display: inline-block;
+  padding: 7px 34px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 1px 0px #a8afb3, 1px 2px 0px #cacfd2, 2px 3px 0px #c9cfd2, 3px 4px 0px #c6d6de;
+ /* box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;*/
+}
+
+.enviar:hover{
+  background-color: #307cec;
+}
+
+.enviar:active {
+  background-color: #6295e2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+div.ex1 {
+  width: 50%;
+  left: 2%;
+  position: relative;
+  padding: 20px;
+  overflow: scroll;
+}
+
+
+ div.ex1{
+  width: 85%;
+  height: 240px;
+  border: 1px solid #ccc;
+  margin: 0px auto;
+  margin-top: 80px;
+  padding-top: 2px;
+  background: white;
+  box-shadow: 1px 1px 2px #ddd;;
+
+}
+

@@ -13,8 +13,10 @@ export class AuthGuard implements CanActivate {
         //inicia sesion para devolver true
       return true;
     } else {
-        //no conectado, redirigir ala pagina de sesion con e url de retorno
+        //no conectado, redirigir a la pagina de sesion con e url de retorno
       this.router.navigate(['/login'], { replaceUrl: true });
+     // this.router.navigate(['/registrarusuario'], { replaceUrl: true });
+
     }
   }
 }

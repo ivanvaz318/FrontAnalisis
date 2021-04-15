@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+
+}
+
+.sidebar{
+    width: 345px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 100;
+    transition: width 300ms;
+    padding: 0;
+}
+.sidebar-brand{
+    height: 90px;
+    padding: 1rem 0rem 1rem  0rem;
+    color: #fff;
+}
+
+.sidebar-brand span{
+    display: inline-block;
+    padding-right: .5rem;
+}
+
+.sidebar-menu {
+    margin-top: 1rem;
+}
+
+.sidebar-menu li{
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+.sidebar-menu a {
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+}
+/*
+.sidebar-menu a.active {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px  0px 30px;
+}
+*/
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+.perfil{
+    height: 90px;
+    padding: 1rem 0rem 1rem  2rem;
+    color: #fff;
+    margin-top: 280px;
+    font-size: 12px;
+}
+
+.perfil span{
+    display: inline-block;
+    padding-right: .5rem;
+}
+
+.sidebar-menu ul a{
+    text-decoration: none;
+    display: block;
+    padding: 14px;
+    color: #f2f2f2;
+    font:bold 16px Verdana;
+    border-bottom: 1px solid #f2f2f2;
+    transition:background .6s, color .6s;
+    -webkit-transition:background .6s, color .6s;
+    -moz-transition:background .6s, color .6s;
+    -o-transition:background .6s, color .6s;
+    border-radius: 9px;
+}
+
+.sidebar-menu ul a:hover{
+    background: #f2f2f2;
+    color: #2e64fa;
+}
+
+
+/* responsivo*/
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+    .sidebar {
+        width: 25%;
+    }
+    
+    .sidebar .sidebar-brand, 
+    .sidebar .perfil, 
+    .sidebar li{
+        padding-left: 1rem;
+        text-align: center;
+    }
+    
+    .sidebar li a{
+        padding-left: 0rem;
+    }
+    
+    .sidebar .sidebar-brand h2 span:last-child,
+    .sidebar .perfil h2 span:last-child,
+    .sidebar li a span:last-child{
+        display: none;
+    }
+    
+    .sidebar:hover{
+        width: 25%;
+        z-index: 200;
+    }
+    
+    .sidebar:hover .sidebar-brand,
+    .sidebar:hover .perfil,
+    .sidebar:hover li{
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    .sidebar:hover li a{
+        padding-left: 1rem;
+    }
+    
+    .sidebar:hover .sidebar-brand h2 span:last-child,
+    .sidebar:hover .perfil h2 span:last-child,
+    .sidebar:hover li a span:last-child{
+        display: inline;
+    }
+}

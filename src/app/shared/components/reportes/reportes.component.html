@@ -1,0 +1,100 @@
+<div>
+    <div class="titulo">
+        <h2>Reportes </h2>
+    </div>
+</div>
+
+<p-table #dt [columns]="cols" [value]="reporte" selectionMode="multiple" >
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex">
+                  <button type="button" class="btn btn-success"  pTooltip="PDF" tooltipPosition="bottom"  (click)="exportPdf()">
+                <i class="fas fa-file-pdf" ></i> 
+            </button>
+           
+                  </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th class="thPtable">
+               Gráfica
+            </th>
+            <th *ngFor="let col of columns" class="headers"
+        >
+                {{col.header}}
+            </th>
+         
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+        <tr [pSelectableRow]="rowData">
+               <td  class="thPtable">
+            <button type="button" class="btn btn-info" (click)="verGrafica(rowData)"><img src="/assets/imgDashboard/analytics.png" class="imgGrafica"></button>
+         </td>
+            <td *ngFor="let col of columns" class="columnas">
+                <span *ngIf="!(col.field == 'irony')">
+
+                    {{rowData[col.field]}}
+                </span>
+                <span *ngIf="(col.field == 'irony')" >
+                
+                    {{irony[rowIndex].IRONIC}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'NONIRONIC')" >
+                
+                    {{irony[rowIndex].NONIRONIC}}
+                  
+                </span>
+
+
+                <span *ngIf="(col.field == 'AGREEMENT')" >
+                
+                    {{agreement[rowIndex].AGREEMENT}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'DISAGREEMENT')" >
+                
+                    {{agreement[rowIndex].DISAGREEMENT}}
+                  
+                </span>
+
+                <span *ngIf="(col.field == 'negativo')" >
+                
+                    {{score_tag[rowIndex].negativo}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'positivo')" >
+                
+                    {{score_tag[rowIndex].positivo}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'neutro')" >
+                
+                    {{score_tag[rowIndex].neutro}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'none')" >
+                
+                    {{score_tag[rowIndex].none}}
+                  
+                </span>
+
+                <span *ngIf="(col.field == 'OBJECTIVE')" >
+                
+                    {{subjectivity[rowIndex].OBJECTIVE}}
+                  
+                </span>
+                <span *ngIf="(col.field == 'SUBJECTIVE')" >
+                
+                    {{subjectivity[rowIndex].SUBJECTIVE}}
+                  
+                </span>
+
+
+
+
+            </td>
+      
+        </tr>
+    </ng-template>
+</p-table>
