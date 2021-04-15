@@ -9,5 +9,11 @@ export class VariablesService {
   pagina = new BehaviorSubject<string>("");
   btnmenu = new BehaviorSubject<boolean>(false);
   resAnalisis = new BehaviorSubject<RespuestaGra>(null);
+
+  
+  showSideUser = new BehaviorSubject<boolean>(false);
+  mostrarLoading = new BehaviorSubject<boolean>(false);
+
+
   constructor() { }
 }

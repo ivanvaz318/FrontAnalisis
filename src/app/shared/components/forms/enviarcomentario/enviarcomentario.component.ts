@@ -18,6 +18,7 @@ export class EnviarcomentarioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private analizarcomentario: AnalizarcomentarioService
+    
   ) {}
 
   ngOnInit() {
@@ -45,6 +46,7 @@ export class EnviarcomentarioComponent implements OnInit {
       let com = new Comentario(this.idcomentario++, this.form.value.comentario);
       this.comentarios.push(com);
       this.submitted = false;
+      this.form.reset();
     }
   }
 

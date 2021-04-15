@@ -65,6 +65,7 @@ export class AnalizarcomentarioService {
   ) {}
 
   enviarcomentario(Comentarios: any) {
+    this.VariableGL.mostrarLoading.next(true);
     this.http
       .post(
         `${environment.Api}PreprocesaComentarios/AnalisisComentario`,
@@ -79,7 +80,7 @@ export class AnalizarcomentarioService {
               case 1:
                 this.llenarrespuestaAnalisis(this.Respuesta.Data);
                 break;
-              case 3:
+              case 3: 
                 this.mensajeerror();
                 break;
               default:
@@ -125,10 +126,12 @@ export class AnalizarcomentarioService {
     this.respuestaGraficas.irony = this.Irony;
 
      this.VariableGL.resAnalisis.next(this.respuestaGraficas);
+     this.VariableGL.mostrarLoading.next(false);
      this.router.navigate(['/resultado'], { replaceUrl: true });
   }
 
   mensajeerror() {
+    this.VariableGL.mostrarLoading.next(false);
     Swal.fire({
       title: 'Atencion',
       text: 'Su comentario no pudo ser analizado',

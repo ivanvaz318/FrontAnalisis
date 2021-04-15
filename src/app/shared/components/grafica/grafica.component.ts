@@ -92,8 +92,6 @@ export class GraficaComponent {
   ) {
     this.VariablesGL.resAnalisis.subscribe((value) => {
       if (value) {
-        console.log(value);
-
         this.respuestaGraficas = value;
       }
       if (value == null) {

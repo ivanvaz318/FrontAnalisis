@@ -53,10 +53,6 @@ export class ReportesComponent implements OnInit {
 }
 
   verGrafica(rowData){
-
-    console.log(rowData);
-  
-  
   this.VariablesGL.resAnalisis.next(rowData);
   this.router.navigate(['/graficas'], { replaceUrl: true });
 

@@ -15,6 +15,10 @@ import { ResultadoanalisisComponent } from './resultadoanalisis/resultadoanalisi
 import { RegistrarusuarioComponent } from './registrarusuario/registrarusuario.component';
 
 
+//animaciones
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
     declarations: [
         PagesComponent,
@@ -31,7 +35,8 @@ import { RegistrarusuarioComponent } from './registrarusuario/registrarusuario.c
         FormsModule,
         ReactiveFormsModule,
         CommonModule,
-        SharedModule
+        SharedModule,
+        BrowserAnimationsModule
         
     ]
 })

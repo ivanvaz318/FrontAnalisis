@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { VariablesService } from 'src/app/services/variables.service';
-import { AuthService } from '../../../services/auth.service';
+import { fadeAnimation } from 'src/app/shared/animations/fade';
+import { flipInXAnimation } from '../../animations/flipinX';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+  animations: [flipInXAnimation]
 })
 export class NavbarComponent implements OnInit {
 
   btnmenu:boolean=false;
   constructor(
-    private authServi: AuthService,
     private variableGL:VariablesService
   ) {
 
@@ -19,18 +20,13 @@ export class NavbarComponent implements OnInit {
       if (value) {
         this.btnmenu=value; 
       }
-    })
-  
+    });
    }
 
   ngOnInit() {
   }
 
-  cerrarSesion(){
-    
-    this.authServi.getcerrarSesion();
-    
-  }
+
   cambiarmenu(){
 
     
@@ -44,4 +40,9 @@ export class NavbarComponent implements OnInit {
 
 this.variableGL.btnmenu.next(this.btnmenu);
   }
+
+  changeSideUser() {
+    this.variableGL.showSideUser.next(true);
+  }
+
 }
