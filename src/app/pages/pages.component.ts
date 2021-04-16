@@ -21,7 +21,7 @@ export class PagesComponent implements OnInit {
   bandera=true;
   btnmenu:boolean;
   mostrarSideUser: boolean;
-  mostrarLoading: boolean;
+  mostrarLoading: boolean=false;
   
   contador: number = 0;
   constructor(

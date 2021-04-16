@@ -1,15 +1,13 @@
-*{
-    box-sizing: border-box;
-}
-
 .principal{
-    position: relative;
-    background-color: aquamarine;
-    top:10rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f8;
+    position: fixed;
+    /*top: -1rem;*/
 }
 
 img{
-    position: absolute;
+    position: fixed;
     margin: 0;
     min-height: 66vh;
     display: flex;
@@ -18,17 +16,15 @@ img{
     opacity: 0.9;
 }
 
-
 .loader-container{
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin-top: 16%;
-    left: 42%;
+    position: fixed;
+    width: 14rem;
+    height: 14rem;
+    margin-top: 17%;
+    left: 49%;
     right: 43%;
     padding: 5%;
-    top:1rem
-    
+    top:1rem  
 }
 
 .loader-container .loader{
@@ -70,7 +66,6 @@ img{
     animation: loader3 1.3s linear infinite;
 }
 
-
 @keyframes loader{
     0%{
         transform:translate(-50%, -50%) rotate(0deg);
@@ -100,36 +95,25 @@ img{
     }
 }
 
-/*.procesar h2{
-    position: fixed;
-    font-size: 20px;
-    margin-top: -14px;
-    padding-left: 76px;
-    text-align: center;
-    color: rgb(8, 7, 15);
-    left: 1rem;
-    top: 1rem;
-}*/
-
 .procesar h2{
-    position: absolute;
+    position: fixed;
     font-size: 27px;
     margin-top: 21rem;
     padding-left: 28rem;
     text-align: center;
     color: rgb(8, 7, 15);
-    left: 33rem;
-    top: 31rem;
+    left: 29rem;
+    top: 22rem;
 }
 
 .procesar2 h2{
-    position: absolute;
+    position: fixed;
     font-size: 42px;
     margin-top: 18rem;
     padding-left: 22rem;
     text-align: center;
     color: rgb(45, 34, 128);
-    left: 34rem;
+    left: 26rem;
     top: -11rem;
 }
 
@@ -137,30 +121,190 @@ img{
     margin-right: 1rem;
 }
 
-/*media de 1100px a 1300px*/
-@media only screen and (min-width:1000px) and (max-width:1300px){
+/*media de 1800px a 1900px*/
+@media only screen and (min-width:1800px) and (max-width:1900px){
 
     img{
         min-height: 38vh;
-        top: 15rem;
-        left: 14rem;
+        top: 11rem;
+        left: 34rem;
     }
 
     .loader-container{
-        top:11rem
+        left: 41%;
+        top:-2rem
         
     }
 
     .procesar h2{
-        left: -1rem;
+        left: 19rem;
+        top: 18rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 25rem;
+        top: -14rem;
+    }
+}
+
+
+/*media de 1700px a 1800px*/
+@media only screen and (min-width:1700px) and (max-width:1800px){
+
+    img{
+        min-height: 38vh;
+        top: 12rem;
+        left: 29rem;
+    }
+
+    .loader-container{
+        left: 40%;
+        top:0rem
+        
+    }
+
+    .procesar h2{
+        left: 14rem;
+        top: 20rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 20rem;
+        top: -13rem;
+    }
+}
+
+/*media de 1600px a 1700px*/
+@media only screen and (min-width:1600px) and (max-width:1700px){
+
+    img{
+        min-height: 38vh;
+        top: 13rem;
+        left: 26rem;
+    }
+
+    .loader-container{
+        left: 39%;
+        top:2rem
+        
+    }
+
+    .procesar h2{
+        left: 11rem;
+        top: 19rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 17rem;
+        top: -12rem;
+    }
+}
+
+/*media de 1500px a 1600px*/
+@media only screen and (min-width:1500px) and (max-width:1600px){
+
+    img{
+        min-height: 38vh;
+        top: 15rem;
+        left: 23rem;
+    }
+
+    .loader-container{
+        left: 38%;
+        top:5rem
+        
+    }
+
+    .procesar h2{
+        left: 8rem;
         top: 21rem;
     }
 
     .procesar2 h2{
         padding-left: 13rem;
-        left: 8rem;
+        left: 14rem;
         top: -10rem;
     }
+}
+
+/*media de 1400px a 1500px*/
+@media only screen and (min-width:1400px) and (max-width:1500px){
+
+    img{
+        min-height: 38vh;
+        top: 15rem;
+        left: 21rem;
+    }
+
+    .loader-container{
+        left: 39%;
+        top:6rem
+        
+    }
+
+    .procesar h2{
+        left: 6rem;
+        top: 21rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 12rem;
+        top: -10rem;
+    }
+}
+
+/*media de 1300px a 1400px*/
+@media only screen and (min-width:1300px) and (max-width:1400px){
+
+    img{
+        min-height: 38vh;
+        top: 15rem;
+        left: 18rem;
+    }
+
+    .loader-container{
+        left: 38%;
+        top:7rem
+        
+    }
+
+    .procesar h2{
+        left: 3rem;
+        top: 21rem;
+    }
+
+    .procesar2 h2{
+        padding-left: 13rem;
+        left: 9rem;
+        top: -10rem;
+    }
+}
+/*media de 1200px a 1300px*/
+@media only screen and (min-width:1200px) and (max-width:1300px){
+
+    .loader-container{
+        position: fixed;
+        width: 13rem;
+        height: 13rem;
+        padding: 8%;
+        left: 37%;
+        top:9rem
+        
+    }
+
+
+    .procesar2 h2{
+        font-size: 38px;
+        padding-left: 12rem;
+        left: 7rem;
+        top: -10rem;
+    }
+
+
 }
 
 /*media de 1100px a 1200px*/
@@ -169,31 +313,31 @@ img{
     img{
         height: 34rem;
         min-height: 16vh;
-        top: 36rem;
-        left: 11rem;
+        top: 12rem;
+        left: 12rem;
     }
 
     .loader-container{
         position: fixed;
-        width: 180px;
-        height: 180px;
+        width: 13rem;
+        height: 13rem;
         padding: 8%;
-        left: 39%;
-        top:32rem
+        left: 35%;
+        top:6rem
         
     }
 
     .procesar h2{
         font-size: 24px;
-        left: -4rem;
-        top: 41rem;
+        left: -3.5rem;
+        top: 17rem;
     }
 
     .procesar2 h2{
         font-size: 38px;
         padding-left: 12rem;
-        left: 3rem;
-        top: 7rem;
+        left: 4rem;
+        top: -11rem;
     }
 }
 
@@ -209,11 +353,11 @@ img{
 
     .loader-container{
         position: fixed;
-        width: 180px;
-        height: 180px;
+        width: 13rem;
+        height: 13rem;
         padding: 8%;
-        left: 39%;
-        top:9rem
+        left: 38%;
+        top:8rem
         
     }
 
@@ -243,10 +387,10 @@ img{
 
     .loader-container{
         position: fixed;
-        width: 170px;
-        height: 170px;
+        width: 11rem;
+        height: 11rem;
         padding: 8%;
-        left: 43%;
+        left: 42%;
         top:11rem
         
     }
@@ -273,31 +417,25 @@ img{
         top: 16rem;
         left: 9rem;
     }
-
     .loader-container{
         position: fixed;
-        width: 170px;
-        height: 170px;
+        width: 11rem;
+        height: 11rem;
         padding: 8%;
-        left: 36.5%;
-        top:12rem
-        
+        left: 36%;
+        top:11rem   
     }
-
     .procesar h2{
         font-size: 20px;
         left: -9rem;
         top: 15rem;
     }
-
     .procesar2 h2{
         font-size: 30px;
         padding-left: 12rem;
         left: 1rem;
         top: -8rem;
     }
-    
-
 }
 
 /*media de 700px a 800px*/
@@ -309,33 +447,27 @@ img{
         top: 16rem;
         left: 5rem;
     }
-
     .loader-container{
         position: fixed;
-        width: 150px;
-        height: 150px;
+        width: 11rem;
+        height: 11rem;
         padding: 11%;
-        left: 33%;
-        top:13rem
-        
+        left: 30%;
+        top:12.5rem   
     }
-
     .procesar2 h2{
         font-size: 28px;
         padding-left: 6rem;
         left:3rem;
         top: -8rem;
     }
-
     .procesar h2{
         font-size: 19px;
         margin-top: 4rem;
         padding-left: 2rem;
         left: 13rem;
         top: 32rem;
-    }
-    
-
+    }  
 }
 
 
@@ -348,24 +480,20 @@ img{
         top: 16rem;
         left: 4.5rem;
     }
-
     .loader-container{
         position: fixed;
-        width: 150px;
-        height: 150px;
+        width: 10rem;
+        height: 10rem;
         padding: 11%;
         left: 32%;
-        top:14rem
-        
+        top:12rem  
     }
-
     .procesar2 h2{
         font-size: 26px;
         padding-left: 6rem;
         left:1rem;
         top: -7rem;
     }
-
     .procesar h2{
         font-size: 18px;
         margin-top: 4rem;
@@ -373,11 +501,7 @@ img{
         left: 11rem;
         top: 29rem;
     }
-    
-
 }
-
-
 
 /*media de 500px a 600px*/
 @media only screen and (min-width:500px) and (max-width:600px){
@@ -388,24 +512,20 @@ img{
         top: 18rem;
         left: 3rem;
     }
-
     .loader-container{
         position: fixed;
-        width: 150px;
-        height: 150px;
+        width: 9rem;
+        height: 9rem;
         padding: 11%;
         left: 29%;
-        top:15rem
-        
+        top:15rem   
     }
-
     .procesar2 h2{
         font-size: 23px;
         padding-left: 6rem;
         left:-1rem;
         top: -7rem;
     }
-
     .procesar h2{
         font-size: 16px;
         margin-top: 4rem;
@@ -413,8 +533,6 @@ img{
         left: 8rem;
         top: 29rem;
     }
-    
-
 }
 
 /*media de 400px a 500px*/
@@ -422,103 +540,62 @@ img{
 
     .loader-container{
         position: fixed;
-        width: 160px;
-        height: 160px;
+        width: 11rem;
+        height: 11rem;
         padding: 11%;
         left: 27%;
-        top:11rem
-        
+        top:11rem;   
     }
-
     .procesar2 h2{
-        font-size: 18px;
+        font-size: 19px;
         padding-left: 6rem;
         left:-1rem;
         top: -9rem;
     }
-
     .procesar h2{
         font-size: 14px;
         margin-top: 4rem;
         padding-left: 2rem;
         left: 7rem;
-        top: 23rem;
-    }
-    
+        top: 25rem;
+    }  
 }
-
 
 /*media de 300px a 400px*/
 @media only screen and (min-width:300px) and (max-width:400px){
 
     .loader-container{
         position: fixed;
-        width: 160px;
-        height: 160px;
+        width: 11rem;
+        height: 11rem;
         padding: 11%;
         left: 27%;
-        top:11rem
-        
+        top:11rem   
     }
-
     .procesar2 h2{
         font-size: 16px;
         padding-left: 6rem;
-        left:-2rem;
+        left:0rem;
         top: -7rem;
     }
-
     .procesar h2{
         font-size: 13px;
         margin-top: 4rem;
         padding-left: 2rem;
         left: 6rem;
-        top: 21rem;
-    }
-    
-    
-    /*img{
-        height: 13rem;
-        min-height: 10vh;
-        top: 14rem;
-        left: 3rem;
-    }
-
-   .loader-container{
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        padding: 11%;
-        left: 34%;
-        top:12rem
-        
-    }
-
-    .procesar h2{
-        font-size: 13px;
-        margin-top: 4rem;
-        padding-left: 2rem;
-        left: 6rem;
-        top: 21rem;
-    }
-   
-    .procesar2 h2{
-        font-size: 16px;
-        padding-left: 6rem;
-        left:-2rem;
-        top: -7rem;
-    }*/
+        top: 25rem;
+    }  
 }
 
 @media only screen and (min-width:200px) and (max-width:300px){
 
     .loader-container{
         position: fixed;
-        width: 160px;
-        height: 160px;
+        width: 11rem;
+        height: 11rem;
         padding: 11%;
-        left: 27%;
-        top:11rem
-        
+        left: 15%;
+        top:12rem  
     }
 }
+
