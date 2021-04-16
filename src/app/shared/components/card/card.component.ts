@@ -35,7 +35,7 @@ export class CardComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.consultaRC.consultanumRC();
+   this.consultaRC.consultanumRC();
   }
 
   ngOnDestroy() {

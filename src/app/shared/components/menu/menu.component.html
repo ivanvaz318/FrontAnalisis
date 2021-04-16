@@ -15,7 +15,7 @@
                     <span  *ngIf="!btnmenu">Analizar comentarios</span></a>
             </li>
             <li>
-                <a routerLink="/reportes"><span class="las la-clipboard-list"></span>
+                <a (click)="verMenu()" routerLink="/reportes"><span class="las la-clipboard-list"></span>
                 <!--<span>Reportes</span></a>
                 <a href=""><span class="las la-clipboard-list"></span>-->
                     <span  *ngIf="!btnmenu">Reportes</span></a>

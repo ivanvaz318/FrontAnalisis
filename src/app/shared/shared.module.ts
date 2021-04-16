@@ -15,6 +15,8 @@ import { TableModule } from 'primeng/table';
 import { ChartsModule } from 'ng2-charts';
 import { SideUserComponent } from './components/side-user/side-user.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import {ButtonModule} from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { LoadingComponent } from './components/loading/loading.component';
      FormsModule, 
      ReactiveFormsModule, 
      RouterModule,
-     TableModule],
+     TableModule,
+     ButtonModule
+     ],
   exports: [
     EnviarcomentarioComponent,
     FormsModule,
