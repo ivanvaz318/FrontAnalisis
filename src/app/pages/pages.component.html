@@ -1,22 +1,24 @@
-<div class="componente" *ngIf="mostrarLoading">
-    <div class="sidebar" [ngClass]="btnmenu ? 'sidebar2' : 'null'" >
-        <app-menu></app-menu>
+
+    <div class="componente" *ngIf="!mostrarLoading">
+        <div class="sidebar" [ngClass]="btnmenu ? 'sidebar2' : 'null'" >
+            <app-menu></app-menu>
+        </div>
+        <div class="main-content" [ngClass]="btnmenu ? 'main-content2' : 'null'">
+            <div class="header" >
+                <app-navbar></app-navbar>
+            </div>
+            
+            <div class="main">
+                <app-contenido></app-contenido>
+            </div>
+            
+            <div *ngIf="mostrarSideUser">
+                <app-side-user [@flipInXAnimation]="mostrarSideUser" (click)="clickSides($event)" class="side-user rounded shadow" ></app-side-user>
+            </div>
+        </div>
     </div>
-    <div class="main-content" [ngClass]="btnmenu ? 'main-content2' : 'null'">
-        <div class="header" >
-            <app-navbar></app-navbar>
-        </div>
 
-        <div class="main">
-            <app-contenido></app-contenido>
-        </div>
 
-        <div *ngIf="mostrarSideUser">
-            <app-side-user [@flipInXAnimation]="mostrarSideUser" (click)="clickSides($event)" class="side-user rounded shadow" ></app-side-user>
-        </div>
+    <div class="loading"  *ngIf="mostrarLoading">
+        <app-loading></app-loading>
     </div>
-</div>
-
-<div class="loading">
-    <app-loading></app-loading>
-</div>
